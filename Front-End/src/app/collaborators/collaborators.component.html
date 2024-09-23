@@ -1,0 +1,15 @@
+<h2>Colaboradores</h2>
+<form (ngSubmit)="addCollaborator()">
+  <input [(ngModel)]="newCollaborator.name" placeholder="Nome" name="name" required />
+  <select [(ngModel)]="newCollaborator.unitId" name="unitId" required>
+    <option *ngFor="let unit of (units$ | async)" [value]="unit.id">{{ unit.name }}</option>
+  </select>
+  <input [(ngModel)]="newCollaborator.userId" placeholder="ID do Usuário" name="userId" required />
+  <button type="submit">Adicionar Colaborador</button>
+</form>
+
+<ul>
+  <li *ngFor="let collaborator of collaborators">
+    {{ collaborator.name }} - Unidade ID: {{ collaborator.unitId }}
+  </li>
+</ul>

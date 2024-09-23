@@ -1,0 +1,16 @@
+<h2>Unidades</h2>
+<form (ngSubmit)="addUnit()">
+  <input [(ngModel)]="newUnit.unitCode" placeholder="Código da Unidade" name="unitCode" required />
+  <input [(ngModel)]="newUnit.name" placeholder="Nome" name="name" required />
+  <select [(ngModel)]="newUnit.isActive" name="isActive">
+    <option [value]="true">Ativo</option>
+    <option [value]="false">Inativo</option>
+  </select>
+  <button type="submit">Adicionar Unidade</button>
+</form>
+
+<ul>
+  <li *ngFor="let unit of units">
+    {{ unit.name }} - Código: {{ unit.unitCode }} - Status: {{ unit.isActive ? 'Ativo' : 'Inativo' }}
+  </li>
+</ul>

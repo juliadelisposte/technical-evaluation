@@ -1,0 +1,16 @@
+<h2>Usuários</h2>
+<form (ngSubmit)="addUser()">
+  <input [(ngModel)]="newUser.login" placeholder="Login" name="login" required />
+  <input [(ngModel)]="newUser.password" placeholder="Senha" name="password" required type="password" />
+  <select [(ngModel)]="newUser.isActive" name="isActive">
+    <option [value]="true">Ativo</option>
+    <option [value]="false">Inativo</option>
+  </select>
+  <button type="submit">Adicionar Usuário</button>
+</form>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.login }} - {{ user.isActive ? 'Ativo' : 'Inativo' }}
+  </li>
+</ul>

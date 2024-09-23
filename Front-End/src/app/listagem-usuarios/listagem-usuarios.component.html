@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Listagem de Usuários</h2>
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Login</th>
+        <th>Password</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.login }}</td>
+        <td>{{ usuario.password }}</td>
+        <td>
+          <span class="badge" [ngClass]="usuario.isActive ? 'bg-success' : 'bg-danger'">
+            {{ usuario.isActive ? 'Ativo' : 'Inativo' }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2>Listagem de Unidades</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>unitCode</th>
+        <th>Nome</th>
+        <th>Ativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let unidade of unidades">
+        <td>{{ unidade.unitCode }}</td>
+        <td>{{ unidade.name }}</td>
+        <td>{{ unidade.isActive ? 'Sim' : 'Não' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

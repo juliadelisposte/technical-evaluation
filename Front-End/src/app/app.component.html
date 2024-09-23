@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sistema de Gestão</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="nav-link btn" (click)="goToCadastroUsuario()">Cadastro de Usuário</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn" (click)="goToListagemUsuarios()">Listagem de Usuários</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn" (click)="goToCadastroColaborador()">Cadastro de Colaborador</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn" (click)="goToListagemColaboradores()">Listagem de Colaboradores</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn" (click)="goToCadastroUnidade()">Cadastro de Unidade</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn" (click)="goToListagemUnidades()">Listagem de Unidades</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
